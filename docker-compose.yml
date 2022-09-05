@@ -1,0 +1,18 @@
+# for development
+# use python manage.py runserver
+version: '3.9'
+services:
+  development:
+    container_name: python_development
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: development
+    tty: true
+  production:
+    container_name: python_production
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: production
+    tty: true
